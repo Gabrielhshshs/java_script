@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+</head>
+<body>
+    <p id="demo">JavaScript pode mudar de estilo de um elemento HTML</p>
+
+    <button type="button" onclick= "alterar()">Mudar CSS</button>
+
+    <h1>Descubra o Maior Número</h1>
+    <script>
+        // Solicita três números ao usuário
+        let num1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+        let num2 = parseInt(prompt("Digite o segundo número inteiro:"));
+        let num3 = parseInt(prompt("Digite o terceiro número inteiro:"));
+
+        // Verifica qual número é o maior
+        let maior;
+        if (num1 >= num2 && num1 >= num3) {
+            maior = num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            maior = num2;
+        } else {
+            maior = num3;
+        }
+
+        // Mostra o maior número na página
+        document.body.innerHTML += `<p>O maior número é: ${maior}</p>`;
+
+        function alterar(){
+            document.getElementById("demo").style.fontSize="25px";
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "pink";
+        }
+    </script>
+</body>
+</html>
